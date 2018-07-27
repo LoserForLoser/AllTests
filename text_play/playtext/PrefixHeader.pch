@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  playtext
+//
+//  Created by 宋朝阳 on 2017/4/17.
+//  Copyright © 2017年 song. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <HyphenateLite/HyphenateLite.h>
+
+#define SCREEN_FRAME ([UIScreen mainScreen].applicationFrame)
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define viewWidthFrame(size) (size * SCREEN_WIDTH / 750)
+
+#define viewHeightFrame(size) (size * SCREEN_HEIGHT / 1334)
+
+#define SCREEN_FRAME ([UIScreen mainScreen].bounds)
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define SCREEN_View_Width_Frame(size) (size * SCREEN_WIDTH / 750)
+
+#define SCREEN_View_Height_Frame(size) (size * SCREEN_HEIGHT / 1334)
+
+#endif /* PrefixHeader_pch */
+
