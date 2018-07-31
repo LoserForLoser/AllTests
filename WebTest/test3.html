@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>计算属性与侦听器</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <input v-model="xing"/>
+            <input v-model="ming"/>
+            <div>{{fullname}}</div>
+            <div>count:{{count}}</div>
+            <div>fullCount:{{fullCount}}</div>
+        </div>
+        <script>
+            new Vue ({
+                el:"#root",
+                data: {
+                    xing:"xing",
+                    ming:"ming",
+                    count:0,
+                    fullCount:0
+                },
+                computed:{
+                    fullname: function (xing, ming) {
+                        return this.xing + ' ' + this.ming;
+                    }
+                },
+                watch: {
+                    xing: function () {
+                        return this.count ++;
+                    },
+                    ming: function () {
+                        return this.count ++;
+                    },
+                    fullname: function () {
+                        return this.fullCount ++;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

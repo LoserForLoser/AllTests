@@ -3,156 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>浏览页面顶部标题</title>
-    <style>
-        body {
-            background-color: #00cd6f;
-            color: #ffffff;
-        }
-        p1, p2, p3, p4 {
-            color: black;
-            font-size: 40px;
-        }
-        special {
-            background-color: #ffffff;
-            color: black;
-            font-size: 66px;
-        }
-        son son_son2 {
-            color: red;
-            font-weight: bold;
-            font-size: 40px;
-            background-color: blue;
-            background-image: url(http://jira.geek-zoo.cn/secure/attachment/17651/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF.png);
-        }
-        #son son_son3 {
-            color: blue;
-            font-weight: bold;
-            font-size: 40px;
-            background-color: red;
-        }
-        [title]
-        {
-            color:red;
-        }
-    </style>
-
-    <script>
-        function myFunction() {
-            alert("asdw");
-        }
-        function parmentFunc(name, age) {
-            alert("name:"+name+",age:"+age);
-        }
-        
-        var txt = "";
-        function tryCatch() {
-            try {
-                adddlert("worng message");
-            } catch (err) {
-                txt="There was an error on this page.\n\n";
-                txt+="Error description: " + err.message + "\n\n";
-                txt+="Click OK to continue.\n\n";
-                alert(txt);
-            }
-        }
-    </script>
+    <script src="./vue.js"></script>
 </head>
 <body style="color: red;">
     I`m back
-    <p1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-        I need CSS treatment
-    </p1>
-    <p2 style="color: blue; font-size: 14px">
-        Me too
-    </p2>
-    <p3>
-        What?
-    </p3>
-    <special>
-        This's speciasl style
-    </special>
-    <son id="son">
-        body son just so so
-        <son_son style="color: white; font-weight: bold; font-size: 10px;">
-            son son just so so
-        </son_son>
-        <son_son1>
-            son_son1 like father
-        </son_son1>
-        <son_son2>
-            son_son2 like self
-        </son_son2>
-        <son_son3>
-            son_son3 is special
-        </son_son3>
-    </son>
-
-    <hr />
-
-    <h1>可以应用样式：</h1>
-    <h2 title="Hello world">Hello world</h2>
-    <a title="W3School" href="http://w3school.com.cn">W3School</a>
-
-    <hr />
-
-    <h1>无法应用样式：</h1>
-    <h2>Hello world</h2>
-    <a href="http://w3school.com.cn">W3School</a>
-
-    <!-- <script>
-        alert("My First JavaScript");
-    </script> -->
-    
-    <h1>
-        My first Web!
-    </h1>
-
-    <h3>
-        换行不？"<"h + 数字">"才好使!
-    </h3>
-
-    <pp id = "demo">我的第一个段落</pp>
-    <ppp id = "mode">我的第二个段落</ppp>
-    
+    <div id="root">
+        <h1>Why always you say? {{message}}</h1>
+        <!-- v-html 不会进行转译 -->
+        <h2 v-html="text">???</h2>
+        <!-- v-text 会进行转译 -->
+        <h2 v-text="text">???</h2>
+        <button @click="handelClick()">{{click}}</button>
+        <button @click="toClick()">{{click}}</button>
+    </div>
     <script>
-        document.getElementById("mode").innerHTML = "我的第一段 javascript 用来替换第二个段落";
-        document.write("Hello World");
-        var num = 123;
-        var str = "asdfasdf";
-        let just = "afdsdf";
-        document.write(" num:",num);
-        document.write(" str:",str);
-        document.write(" just:",just);
-        document.getElementById("demo").innerHTML = num;
-        document.write(" ture:",true);
-        document.write(" false:",false);
-        var person = {name:"Song", age:13, sex:"men"};
-        document.write(" oerson.name:",person.name);
-        document.write(" person[\"age\"]:", person["age"]);
-        just = undefined;
-        document.write(" just:",just);
-        just = null;
-        document.write(" just:",just);
-        let cars = new Array("Audi", "BMW", "Benz", "Volvo", "Hummer", "Ford", "SUBARU");
-        for (let theCar = 0; theCar < cars.length; theCar++) {
-            const element = cars[theCar];
-            document.write("The car Name:" + element + "<br>");
-        }
-        document.write("<hr />");
-        for (const theCar in cars) {
-            if (cars.hasOwnProperty(theCar)) {
-                const element = cars[theCar];
-                document.write("The car Name:" + element + "<br>");
+        new Vue({
+            el:"#root",
+            data:{
+                message:"This 'I'll be back!'",
+                number:123,
+                time:"2018-07-30",
+                text:"<h1>wulu wulu wulu</h1>",
+                click:"点击走你"
+            },
+            methods:{
+                handelClick: function () {
+                    alert("str");
+                },
+                toClick: function () {
+                    alert("str");
+                    this.click = "走你点击";
+                }
             }
-        }
-        document.write("<hr />");
+        })
     </script>
-
-    <button onclick="myFunction()">touch here</button>
-    <button onclick="parmentFunc('赵钱孙李','15')">点击获取赵钱孙李年龄</button>
-    <button onclick="parmentFunc('666','永远18')">点击获取特殊信息</button>
-
-    <input type="button" value="View message" onclick="tryCatch()">
-
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>属性绑定和数据双向绑定</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div v-bind:title="title + 'something'">I'll be back!</div>
+            <div :title="title + 'something'">I'll be back!</div>
+            <input v-model="message"/>
+            <div>{{message}}</div>
+        </div>
+        <script>
+            new Vue ({
+                el:"#root",
+                data: {
+                    title:"It's have deferent means",
+                    message:"Say something"
+                },
+                methods: {
+                    
+                }
+            })
+        </script>
+    </body>
+</html>
