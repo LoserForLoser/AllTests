@@ -2,18 +2,65 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>属性绑定和数据双向绑定</title>
+        <title>TodoList</title>
         <script src="./vue.js"></script>
     </head>
     <body>
-        <div id="root">
-            
+        <div id="app">
+            <div>
+                <input v-model='inputValue'/>
+                <button @click="handelClick">提交</button>
+            </div>
+            <ul>
+                <!-- <li v-for="(item, index) in list">{{item}} {{index}}</li> -->
+                <todo-item v-for="(item, index) in list" :key="index" :content="item" :index="index" @delete="touchDelete"></todo-item>
+            </ul>
+            <asdw></asdw>
         </div>
         <script>
-            new Vue ({
-                el:"#root",
+            Vue.component ('todoItem', {
+                props:['content', 'index'],
+                template:"<li @click='touchClick'>{{content}} {{index}}</li>",
+                methods: {
+                    touchClick () {
+                        alert('点击'+this.index+'元素'),
+                        this.$emit('delete', this.index);
+                    }
+                }
+            })
+            Vue.component ('asdw', {
+                template:"<dic>22222222</div>"
+            })
+
+            var todoItem = {
+                props:['content', 'index'],
+                template:'<li @click="touchClick">{{content}} {{index}}</li>',
+                methods: {
+                    touchClick () {
+                        alert('点击'+this.index+'元素');
+                        this.$emit('delete', this.index);
+                    }
+                }
+            }
+
+            var theVM = new Vue ({
+                el:"#app",
+                components: {
+                    todoItem: todoItem
+                },
                 data: {
-                    
+                    inputValue:'',
+                    list:['第一课内容', '第二课内容']
+                },
+                methods:{
+                    handelClick: function () {
+                        this.list.push(this.inputValue);
+                        this.inputValue = ''
+                    },
+                    touchDelete (index) {
+                        alert(this.list)
+                        this.list.splice(index, 1);
+                    }
                 }
             })
         </script>

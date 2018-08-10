@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>组建中使用的细节点</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <table>
+                <tbody>
+                    <tr is="row"></tr>
+                    <tr is="row"></tr>
+                    <tr is="row"></tr>
+                </tbody>
+            </table>
+
+            <div ref="hello" @click="touch">hello world</div>
+            
+            <counter ref="conterOne" @change="totalChange"></counter>
+            <counter ref="conterTwo" @change="totalChange"></counter>
+            <div>total:{{total}}</div>
+        </div>
+        <script>
+            Vue.component('row', {
+                data () {
+                    return {
+                        content:"this is a row"
+                    }
+                },
+                template: "<tr><td>this is a row</td></tr>"
+            })
+            
+            Vue.component('counter', {
+                template:"<div @click='touchNumber'>{{number}}</div>",
+                data () {
+                    return {
+                        number: 0
+                    }
+                },
+                methods: {
+                    touchNumber () {
+                        this.number++,
+                        this.$emit('change')
+                    }
+                }
+            })
+
+            new Vue ({
+                el:"#root",
+                data: {
+                    total: 0,
+                },
+                methods: {
+                    touch () {
+                        this.$refs.hello
+                        alert(this.$refs.hello.innerHTML)
+                        console.log(this.$refs.hello.innerHTML)
+                    },
+                    totalChange () {
+                        this.total = this.$refs.conterOne.number + "+" + this.$refs.conterTwo.number + "=" + (this.$refs.conterOne.number + this.$refs.conterTwo.number)
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

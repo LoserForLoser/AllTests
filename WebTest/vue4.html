@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue中的条件渲染</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div v-if="a">{{message}}:a</div>
+            <div v-else-if="b">{{message}}:b</div>
+            <div v-else>It's hid</div>
+            <div v-show="show">{{message}}</div>
+            <div v-if="hidden">
+                用户名：<input key="uwerName"/>
+            </div>
+            <div v-else>
+                手机号：<input key="phoneNumber"/>
+            </div>
+            <button @click="changeInput">切换</button>
+        </div>
+        <script>
+            new Vue ({
+                el:"#root",
+                data: {
+                    show: "a",
+                    hidden: true,
+                    message:"hello world"
+                },
+                methods: {
+                    changeInput () {
+                        this.hidden = !this.hidden
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

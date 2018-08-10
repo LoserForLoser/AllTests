@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue作用域插槽</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <child>
+                <!-- <p>Hi</p>
+                <h1>Aloha</h1> -->
+                <template slot-scope="props">
+                    <li>{{props.item}} - {{props.index}}</li>
+                </template>
+            </child>
+        </div>
+        <script>
+            Vue.component('child', {
+                data () {
+                    return {
+                        list:[1,2,3,4]
+                    }
+                },
+                template:`<div>
+                            <ul>
+                                <li v-for="(item, index) in list">{{item}} {{index}}</li>
+                                <slot v-for="(item, index) in list" :item=item :index=index></slot>
+                            </ul>
+                          </div>`,
+            })
+
+            new Vue ({
+                el:"#root",
+                data: {
+                    
+                },
+                methods: {
+                    
+                }
+            })
+        </script>
+    </body>
+</html>

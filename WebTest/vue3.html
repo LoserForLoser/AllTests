@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue中样式的绑定</title>
+        <script src="./vue.js"></script>
+        <style>
+            .activated {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div @click="handleDivclick" :class="{activated: isActivated}">随便给一个</div>
+            <div @click="moreHandleDivClick" :class="[activated]">再随便给一个</div>
+            <div @click="objHadnleDivClick" :style="styleObj">再再随便给一个</div>
+            <div @click="objHadnleDivClick" :style="[styleObj, {fontsize: '20px'}]">再再再随便给一个</div>
+        </div>
+        <script>
+            new Vue ({
+                el:"#root",
+                data: {
+                    isActivated: false,
+                    activated: "",
+                    styleObj: {
+                        color: "red"
+                    }
+                },
+                methods: {
+                    handleDivclick () {
+                        this.isActivated = !this.isActivated
+                    },
+                    moreHandleDivClick () {
+                        if (this.activated === "activated") {
+                            this.activated = ""
+                        } else {
+                            this.activated = "activated"
+                        }
+                    },
+                    objHadnleDivClick () {
+                        this.styleObj.color = this.styleObj.color==="blue" ? "red" : "blue";
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

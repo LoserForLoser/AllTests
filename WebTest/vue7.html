@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>组件参数校验与非props特性</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <child content="hello world" :con="123" :commit="'asdf'" :lele="'asdwqerf'"></child>
+            <noprops coonntt="'???!!!'"></noprops>
+        </div>
+        <script>
+            Vue.component('child', {
+                props:["content"],
+                props: {
+                    content: String,
+                    con: Number,
+                    commit: [Number, String],
+                    lele: {
+                        type: String, //数据类型只能是
+                        required: true, //必传
+                        default: "default",
+                        validator (value) {
+                            return (value.length > 5)
+                        }
+                    }
+                },
+                template:"<div>{{content}} {{con}} {{commit}} {{lele}}</div>"
+            })
+
+            Vue.component('noprops', {
+                template:"<div>no props</div>"
+            })
+
+            new Vue ({
+                el:"#root",
+                data: {
+                    
+                },
+                methods: {
+                    
+                }
+            })
+        </script>
+    </body>
+</html>

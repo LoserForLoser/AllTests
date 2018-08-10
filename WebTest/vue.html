@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>计算属性、方法和监听</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div>{{firstName + lastName}}</div>
+            <div>{{name}}</div>
+            <!-- <div>{{fullName()}}</div> -->
+            <div>{{fullName}}</div>
+        </div>
+        <script>
+            new Vue ({
+                el:"#root",
+                data: {
+                    firstName:"first",
+                    lastName:"last",
+                    fullName:"first last"
+                },
+                watch: {
+                    firstName () {
+                        console.log("firstname +1")
+                        return this.fullName = this.firstName + ' ' + lastName
+                    },
+                    lastName () {
+                        console.log("lastname +1")
+                        return this.fullName = this.firstName + ' ' + lastName
+                    }
+                },
+                // methods: {
+                //     fullName () {
+                //         return this.firstName + ' ' + this.lastName
+                //     }
+                // },
+                computed: {
+                    name () {
+                        return this.firstName + ' ' + this.lastName
+                    }
+                },
+
+            })
+        </script>
+    </body>
+</html>

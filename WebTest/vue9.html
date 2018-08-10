@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>非父子组件传值(Bus/总线/观察者模式)</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <child content="DELL"></child>
+            <child content="LEE"></child>
+        </div>
+
+        <script>
+            Vue.prototype.bus = new Vue ()
+
+            Vue.component('child', {
+                data () {
+                    return {
+                        selfContent: this.content
+                    }
+                },
+                props:{
+                    content:String,
+                },
+                template:"<div @click='touch'>{{selfContent}}</div>",
+                methods: {
+                    touch () {
+                        this.bus.$emit('change', this.selfContent)
+                    }
+                },
+                mounted () {
+                    var this_ = this
+                    this.bus.$on('change', function (message) {
+                        this_.selfContent = message
+                    })
+                }
+            })
+            
+            new Vue ({
+                el:"#root",
+                data: {
+                    
+                },
+                methods: {
+                    
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -12,9 +12,7 @@
                 <button @click="touchAdd()">插♂入</button>
             </div>
             <ul>
-                <!-- <li>begin</li>
-                <li v-for="(item, index) of list" :key="index">{{item}}</li>
-                <li>end</li> -->
+                <!-- <li v-for="(item, index) of list" :key="index">{{item}}</li> -->
                 <todo-item v-for="(item, index) of list" :key="index" :content="item" :index="index" @delete="touchDelete"></todo-item>
             </ul>
         </div>

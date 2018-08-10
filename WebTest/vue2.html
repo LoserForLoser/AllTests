@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>计算属性setter和getter</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div>{{name}}</div>
+        </div>
+        <script>
+            new Vue ({
+                el:"#root",
+                data: {
+                    firstName:"first",
+                    lastName:"last", 
+                },
+                methods: {
+                    
+                },
+                computed: {
+                    // name () {
+                    //     return this.firstName + ' ' + this.lastName
+                    // }
+                    name: {
+                        get () {
+                            return this.firstName + ' ' + this.lastName
+                        },
+                        set: function (value) {
+                            console.log(value)
+                            var nameArr = value.split(' ')
+                            this.firstName = nameArr[0]
+                            this.lastName = nameArr[1]
+                        }
+                    }
+                },
+            })
+        </script>
+    </body>
+</html>

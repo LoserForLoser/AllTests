@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>父子组件传值</title>
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <counter :count="0" @change='numberChange'></counter>
+            <counter :count="0" @change='numberChange'></counter>
+            <div>总和：{{total}}</div>
+        </div>
+        <script>
+            var counter = {
+                props:["count"],
+                data () {
+                    return {
+                        number: this.count
+                    }
+                },
+                template:"<div @click='handleClick'>{{number}} （点击+1）</div>",
+                methods: {
+                    handleClick () {
+                        this.number++;
+                        this.$emit('change', 1);
+                    }
+                }
+            }
+
+            new Vue ({
+                el:"#root",
+                components: {
+                    counter:counter,
+                },
+                data: {
+                    total:0
+                },
+                methods: {
+                    numberChange (step) {
+                        this.total += step
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
