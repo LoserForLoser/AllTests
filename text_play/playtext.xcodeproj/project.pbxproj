@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2423E97D7ED85161559B2776 /* Pods_playtext.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1FBE4BCB520C02BAD7507 /* Pods_playtext.framework */; };
 		8308B2801F24B6F20050E829 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308B27F1F24B6F20050E829 /* TableView.m */; };
 		8341B5411EC41AC700AAAD63 /* ControlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341B5401EC41AC700AAAD63 /* ControlTest.m */; };
 		8347AC2D1F025F6E006A7A56 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8347AC2C1F025F6E006A7A56 /* GCDViewController.m */; };
@@ -32,6 +31,7 @@
 		83E285F71ED1CF7D00829CA8 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E285F41ED1CF7D00829CA8 /* ScrollView.m */; };
 		83E285FA1ED1D9CF00829CA8 /* BackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E285F91ED1D9CF00829CA8 /* BackController.m */; };
 		83E7C0601EEC1E2000172674 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7C05F1EEC1E2000172674 /* CollectionViewCell.m */; };
+		FB9AB37183F63BC0B2A54235 /* libPods-playtext.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6959F9D7335F3C9485EC6D86 /* libPods-playtext.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		3C8D5808DAC8AC077686E8C0 /* Pods-playtext.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playtext.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playtext/Pods-playtext.debug.xcconfig"; sourceTree = "<group>"; };
+		6959F9D7335F3C9485EC6D86 /* libPods-playtext.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-playtext.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8308B27E1F24B6F20050E829 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
 		8308B27F1F24B6F20050E829 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
 		83345CB61EA499030055CFDF /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		83E7C05E1EEC1E2000172674 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		83E7C05F1EEC1E2000172674 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		B30C9F28BE6C5B7C60B46C75 /* Pods-playtext.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playtext.release.xcconfig"; path = "Pods/Target Support Files/Pods-playtext/Pods-playtext.release.xcconfig"; sourceTree = "<group>"; };
-		FFB1FBE4BCB520C02BAD7507 /* Pods_playtext.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playtext.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			files = (
 				83DBAD361F161D3B00C48184 /* libsqlite3.0.tbd in Frameworks */,
 				83ACC0431EFCF1180045ED6A /* JavaScriptCore.framework in Frameworks */,
-				2423E97D7ED85161559B2776 /* Pods_playtext.framework in Frameworks */,
+				FB9AB37183F63BC0B2A54235 /* libPods-playtext.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			children = (
 				83DBAD351F161D3B00C48184 /* libsqlite3.0.tbd */,
 				83ACC0421EFCF1180045ED6A /* JavaScriptCore.framework */,
-				FFB1FBE4BCB520C02BAD7507 /* Pods_playtext.framework */,
+				6959F9D7335F3C9485EC6D86 /* libPods-playtext.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -405,9 +405,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-playtext/Pods-playtext-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -420,13 +423,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-playtext-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		821CAAE2AAD932A7AE194909 /* [CP] Embed Pods Frameworks */ = {
@@ -435,9 +441,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-playtext/Pods-playtext-frameworks.sh",
+				"${PODS_ROOT}/HyphenateLite/iOS_Pods_IMSDK_V3.5.3/HyphenateLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyphenateLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
