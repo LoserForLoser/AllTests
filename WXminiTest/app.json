@@ -1,0 +1,43 @@
+{
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/comment/comment",
+    "pages/wxml/wxml",
+    "pages/wxss/wxss",
+    "pages/image/image",
+    "pages/view/view",
+    "pages/index/about/about",
+    "pages/toast/toast"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#00ff00",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "backgroundColor": "#00f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "text1",
+        "iconPath": "assets/tabbar/choose_nor.png",
+        "selectedIconPath": "assets/tabbar/choose_sel.png"
+      },
+      {
+        "pagePath": "pages/index/about/about",
+        "text": "text2",
+        "iconPath": "assets/tabbar/switch_close.png",
+        "selectedIconPath": "assets/tabbar/switch_open.png"
+      }
+    ]
+  }
+}

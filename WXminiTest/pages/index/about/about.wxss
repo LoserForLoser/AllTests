@@ -1,0 +1,5 @@
+/* pages/index/about.wxss */
+.pressed {
+  background: red;
+  color: blue;
+}

@@ -1,0 +1,4 @@
+<!--pages/comment/comment.wxml-->
+<text>pages/comment/comment.wxml</text>
+
+<navigator open-type="navigateBack" delta="2">navigateBack:返回最外层首页</navigator>

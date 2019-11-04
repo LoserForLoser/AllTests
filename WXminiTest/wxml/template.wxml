@@ -1,0 +1,12 @@
+<!-- 不可import递归导入 -->
+<!-- <import src="./test.wxml"/> -->
+
+
+<template name="contentTemplate">
+  <button>{{btnTitle}}</button>
+  <view>
+    {{viewTitle}}
+    <!-- include可循环导入 -->
+    <include src="./test.wxml"/>
+  </view>
+</template>

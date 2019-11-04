@@ -1,0 +1,44 @@
+<!--pages/index/about.wxml-->
+<text>about页面\n</text>
+<text>lallalala\n</text>
+
+<!-- 默认不能选中 -->
+<text selectable="{{true}}">选中\n</text>
+<text selectable>选中\n</text>
+
+<!-- 决定文本空格大小 -->
+<text>hi ! ! !\n</text>
+<text space="nbsp">hi ! ! !\n</text>
+<text space="nbsp">hi ! ! !\n</text>
+<text space="ensp">hi ! ! !\n</text>
+
+<!-- decode 是否解码文本 -->
+<text>5 &gt; 3</text>
+<text decode>5 &gt; 3</text>
+
+<!-- button基本使用 -->
+<button>默认按钮</button>
+
+<!-- size属性 -->
+<button size="mini">size mini</button>
+
+<!-- type属性 -->
+<button size="mini" type="primary">stype="primary"</button>
+<button size="mini" type="default">type="default"</button>
+<button size="mini" type="warn">type="warn"</button>
+
+<!-- plain镂空属性 -->
+<button size="mini" plain>plain镂空属性</button>
+
+<!-- disable不可用 -->
+<button size="mini" disabled>disabled</button>
+
+<!-- loading -->
+<button size="mini" loading>loading</button>
+
+<!-- hover-class -->
+<button size="mini" hover-class="pressed">hover-class</button>
+
+<!-- 使用自定义组件 -->
+<my-cpn></my-cpn>
+<my-cpn/>

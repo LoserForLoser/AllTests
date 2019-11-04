@@ -1,0 +1,87 @@
+<!--pages/wxml/wxml.wxml-->
+<text>pages/wxml/wxml.wxml</text>
+
+<!-- wxml格式 标签必须有结束符 单标签必须“/”结尾 -->
+<!-- <view></view>
+<image/> -->
+
+<!-- 大小写严格 -->
+
+<!-- mustache  -->
+<view>{{title}}</view>
+<view>{{firsts}} {{last}}</view>
+<view>{{firsts+" "+last}}</view>
+<text>{{age >= 18 ? "成年" : "未成年"}}</text>
+<text>{{"Now:"+timeNow}}</text>
+<button size="mini" bindtap="switchCSS">换布局</button>
+<view class="textView {{isChangeCSS?'newCSS':''}}">Text View</view>
+
+<!-- 条件判断 -->
+<text>"-- 条件判断 --"</text>
+<button bindtap="showView">点击展示/隐藏</button>
+<input></input>
+<view wx:if="{{isShow}}">F**k U!</view>
+<view wx:if="{{score >= 90}}">"90+"</view>
+<view wx:elif="{{score >= 60}}">“60+”</view>
+<view wx:else>“60-”</view>
+
+<!-- hidden——组件存在 if——组件不存在 -->
+<!-- 高频率创建耗性能 -->
+<button bindtap="hiddenView">点击展示/隐藏</button>
+<text hidden="{{viewHidden}}">受hidden控制\n</text>
+<text hidden="{{viewHidden}}">hidden——组件存在 if——组件不存在，高频率创建耗性能</text>
+
+<!-- wx:for -->
+<!-- <view wx:for="{{['1', '16', '15', '14', '13', '12']}}" wx:key="key">{{item}}</view>
+<view wx:for="√˙∆ç˙ç∆©˙√∫∆˚˙∫˚∆√ç†≈˙" wx:key="key">{{item}} {{index}}</view>
+<view wx:for="{{9}}" wx:key="key">{{item}} {{index}}</view> -->
+
+<!-- <block></block> -->
+<!-- <view wx:for="{{9}}" wx:key="key"></view> -->
+<!-- 包裹元素的标签，无需创建，更节省性能资源 直接受控制属性 -->
+<!-- 遍历功能不影响阅读，增强可读性 -->
+<!-- <block wx:for="{{9}}" wx:key="key"></block> -->
+
+<!-- item index - 换别名 -->
+<!-- <view wx:for="{{moives}}" wx:key="key" wx:for-item="moviesItem" wx:for-index="moviesIndex">{{moviesItem}} {{moviesIndex}}</view> -->
+
+<!-- key 新数据直接插入，高效、节省资源，否者依次更新资源 -->
+<!-- <block wx:for="{{numbers}}" wx:key="key">
+  <block wx:for="{{item}}" wx:key="key">  
+    <button size="mini">{{item}}</button>
+  </block>
+</block> -->
+
+<!-- 未使用前内部无任何渲染 -->
+<!-- <template name="contentTemplate">
+  <button>{{btnTitle}}</button>
+  <view>{{viewTitle}}</view>
+</template> -->
+<!-- 不可import递归导入 -->
+<!-- <import src="/wxml/template.wxml"/> -->
+<!-- <import src="../..//wxml/template.wxml"/> -->
+<!-- include可循环导入 -->
+<!-- <include src="../../wxml/template.wxml"/> -->
+
+<!-- 使用，支持 单/双 标签 -->
+<!-- <template is="contentTemplate" data="{{btnTitle:'123', viewTitle:'456'}}"/>
+<template is="contentTemplate" data="{{btnTitle:'456', viewTitle:'123'}}"/> -->
+
+<!-- <import src="/wxml/template.wxml"/>
+<template is="contentTemplate" data="{{btnTitle:'123', viewTitle:'456'}}"/> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

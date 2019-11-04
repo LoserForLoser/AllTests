@@ -1,0 +1,17 @@
+<!--pages/view/view.wxml-->
+<text>pages/view/view.wxml</text>
+
+<!-- 基本使用 -->
+<view class="box">
+  <text>text</text>
+  <button>button</button>
+  哈哈哈
+</view>
+<view>
+  压脉带
+</view>
+
+<!-- hover-class -->
+<view class="box1" hover-class="hoverCSS" hover-start-time="{{1000}}" hover-stay-time="{{1000}}">box1</view>
+
+<view class="box2" hover-class="hoverCSS2" hover-stop-propagation><view class="box1" hover-class="hoverCSS" hover-start-time="{{1000}}" hover-stay-time="{{1000}}">box1</view></view>

@@ -1,0 +1,8 @@
+<!--pages/toast/toast.wxml-->
+<text>pages/toast/toast.wxml</text>
+
+<button size="mini" bindtap="taqpShowToast">展示Toast</button>
+<button size="mini" bindtap="taqpShowModal">展示Modal</button>
+<button size="mini" bindtap="taqpShowLoading">展示Loading</button>
+<button size="mini" bindtap="taqpShowActionSheet">展示ActionSheet</button>
+<button size="mini" open-type="share">分享</button>

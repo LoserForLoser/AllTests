@@ -1,0 +1,11 @@
+/* pages/wxml/wxml.wxss */
+
+.textView {
+  font-size: 30rpx;
+  color: red;
+}
+
+.newCSS {
+  font-size: 50rpx;
+  color: blue;
+}

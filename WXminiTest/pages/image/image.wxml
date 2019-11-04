@@ -1,0 +1,16 @@
+<!--pages/image/image.wxml-->
+<text>pages/image/image.wxml</text>
+
+<!-- 单标签/双标签 -->
+<image src="../../assets/tabbar/choose_nor.png"/>
+<image src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLBWoD59nFDL59JqiaBn9YtVheIVWq1vnrJw25up6ECVps8yFwH3GyyPnOfwJgkFftJk/356"></image>
+
+<!-- 手机相册 -->
+<button bindtap="chooseImage">选图</button>
+<image  src="{{imagePath}}"></image>
+
+<!-- bindload -->
+<image src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLBWoD59nFDL59JqiaBn9YtVheIVWq1vnrJw25up6ECVps8yFwH3GyyPnOfwJgkFftJk/356" bindload="bindload" wx:for="{{1}}" lazy-load></image>
+
+<!-- 识别小程序码 -->
+<image show-menu-by-longpress></image>

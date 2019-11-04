@@ -1,0 +1,19 @@
+/* pages/wxss/wxss.wxss */
+@import './box.wxss';
+
+.box {
+  color:blue;
+  font-size: 20px;
+}
+
+.contant {
+  color: blue;
+}
+
+.contant111 {
+font-size: 32px;
+}
+
+.contant222 {
+font-size: 64rpx;
+}

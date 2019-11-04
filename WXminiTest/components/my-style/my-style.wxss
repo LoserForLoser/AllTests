@@ -1,0 +1,8 @@
+/* components/my-style/my-style.wxss */
+.content {
+  font-size: 100rpx;
+  color: green;
+}
+#box {
+  background: orange;
+}

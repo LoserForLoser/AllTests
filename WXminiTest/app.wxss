@@ -1,0 +1,11 @@
+/**app.wxss**/
+@import './pages/style/button.wxss';
+
+.container {
+  color: green;
+  font-size: 100px;
+} 
+
+.contant {
+  color: green;
+}

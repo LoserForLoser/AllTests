@@ -1,0 +1,8 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<navigator open-type="navigateBack">navigateBack:返回</navigator>
+<navigator url="/pages/comment/comment">跳转评论页</navigator>
+
+<text>代码控制返回</text>
+<button size="mini" bindtap="codeBackHome">返回</button>

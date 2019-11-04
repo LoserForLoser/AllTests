@@ -1,0 +1,75 @@
+<!--index.wxml-->
+
+<!-- 1.数据绑定 -->
+<!-- <view>hello {{name}}</view>
+<text>age:{{age + 20}}</text> -->
+
+<!-- 2.列表 -->
+<!-- <view wx:for="{{students}}">名字{{item.name}}年龄{{item.age}}编号{{item.id}}</view> -->
+
+<!-- 3.监听 -->
+<!-- <view>number:{{count}}</view>
+<button size="mini" bindtap="btnClick">+</button>
+<button size="mini" bindtap="btnSub">-</button>
+
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="getUser">获取授权</button>
+
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data> -->
+
+<!-- <button bindtap="touchButton" size="mini"></button>
+<button bind:tap="touchButton" size="mini"></button>
+<button catch:tap="touchButton" size="mini"></button> -->
+
+<!-- 使用自定义组件 -->
+<!-- <my-cpn></my-cpn>
+<my-cpn/> -->
+
+<!-- 自定义组建样式与主页面互不受影响 -->
+<!-- <view class="content">lalalalalala~~~</view>
+<my-style/> -->
+
+<!-- 自定义事件组建传递 内容/样式 -->
+<!-- <my-prop title = "111" titleclass="red"/>
+<my-prop title = "222" titleclass="greeen"/>
+<my-prop titleclass="blue"/> -->
+
+<!-- 点击时间传递 -->
+<!-- <view>当前计数{{number}}</view>
+<my-event bind:add="addone"/> -->
+
+<!-- 直接选中组件修改数据/调用方法 -->
+<!-- <button size="mini" bindtap="changeCounter">修改组件内数据</button>
+<my-sel class="sel-class" id="sel-id"/> -->
+
+<!-- 插槽slot -->
+<!-- <view>单个插槽</view>
+<my-slot>
+  <button size="mini">插入的按钮</button>
+</my-slot>
+<my-slot>
+  <slider></slider>
+</my-slot>
+<view>多个插槽</view>
+<view>
+  <my-slots>
+    <button size="mini" slot="slots3">插入的按钮3</button>
+  </my-slots>
+</view> -->
+
+<navigator url="/pages/detail/detail">跳转详情页</navigator>
+<navigator url="/pages/detail/detail" open-type="redirect">redirect:跳转详情页</navigator>
+<navigator url="/pages/index/about/about" open-type="switchTab">switchTab:跳转关于页</navigator>
+<navigator url="/pages/detail/detail" open-type="reLaunch">reLaunch:关闭所有页面</navigator>
+
+<navigator url="/pages/detail/detail?name=Lion&age=18">跳转详情页传值</navigator>
+<view>展示改变前后：{{navigationValue}}</view>
+
+<text>代码控制跳转</text>
+<button size="mini" bindtap="codeNavigateToPushDetail">代码跳转详情页（默认navigateTo）</button>
+<button size="mini" bindtap="codeRedirectPushDetail">代码跳转详情页 redirect</button>
+<button size="mini" bindtap="codeSwitchTabPushDetail">代码跳转详情页 switchTab</button>
+<button size="mini" bindtap="codeReLaunchPushDetail">代码跳转详情页 reLaunch</button>
+
+
+

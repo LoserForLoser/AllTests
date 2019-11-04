@@ -1,0 +1,23 @@
+<!--pages/wxss/wxss.wxml-->
+
+<!-- 设置行内（内联）样式 -->
+<view style="color:red; font-size:50px;">哈哈哈哈哈</view>
+
+<!-- 页内样式 -->
+<view class="box">???!!!</view>
+
+<!--  全局样式 -->
+<view class="container">666</view>
+
+<!-- 三个样式作用同一组件 --> 
+<view style="color:red;" class="contant">F**K!</view>
+<!-- 权重 -->
+
+<!-- rpx-屏幕自动适配 = px*2 -->
+<view class="box111"></view>
+<view class="box222"></view>
+
+<view class="contant111">F**K U!</view>
+<view class="contant222">F**K U!</view>
+
+<!-- 样式导入 多界面样式统一管理 -->
