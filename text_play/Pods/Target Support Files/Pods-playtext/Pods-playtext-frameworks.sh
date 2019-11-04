@@ -143,10 +143,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/HyphenateLite/iOS_Pods_IMSDK_V3.5.3/HyphenateLite.framework"
+  install_framework "${PODS_ROOT}/HyphenateLite/iOS_Pods_IMSDK_V3.5.4/HyphenateLite.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/HyphenateLite/iOS_Pods_IMSDK_V3.5.3/HyphenateLite.framework"
+  install_framework "${PODS_ROOT}/HyphenateLite/iOS_Pods_IMSDK_V3.5.4/HyphenateLite.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

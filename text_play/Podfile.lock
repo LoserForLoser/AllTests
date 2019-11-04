@@ -17,13 +17,13 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - HyphenateLite (3.5.3)
+  - HyphenateLite (3.5.4)
   - Masonry (1.1.0)
-  - MJExtension (3.0.15.1)
-  - MJRefresh (3.1.15.7)
-  - SDWebImage (4.4.6):
-    - SDWebImage/Core (= 4.4.6)
-  - SDWebImage/Core (4.4.6)
+  - MJExtension (3.0.16)
+  - MJRefresh (3.1.16)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
   - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
@@ -50,11 +50,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  HyphenateLite: 97b4c880eadba99e6ac4dc90d900273853cc0178
+  HyphenateLite: 14fe04b74f5e7d990a8d1c3dbdb56e7b718493e1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
 PODFILE CHECKSUM: 5cd4c680df5db4676f56d3b52b85d26b0c0b9172

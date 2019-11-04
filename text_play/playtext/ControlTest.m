@@ -8,6 +8,7 @@
 
 #import "ControlTest.h"
 #import "GCDViewController.h"
+#import "ImageGIFController.h"
 
 #import <Masonry/Masonry.h>
 
@@ -64,6 +65,15 @@
     [GCDBtn setBackgroundColor:[UIColor colorWithRed:51/255.0 green:143/255.0 blue:252/255.0 alpha:1]];
     [GCDBtn addTarget:self action:@selector(jumpToGCD) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:GCDBtn];
+    
+    UIButton *imageGIF = [UIButton buttonWithType:UIButtonTypeCustom];
+    [imageGIF setFrame:CGRectMake(viewWidthFrame(80), 64 + viewWidthFrame(250), viewWidthFrame(590), viewWidthFrame(60))];
+    [imageGIF.layer setCornerRadius:viewWidthFrame(20)];
+    [imageGIF setTitle:@"Image-GIF" forState:UIControlStateNormal];
+    [imageGIF setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [imageGIF setBackgroundColor:[UIColor colorWithRed:0 green:191.0/255.0 blue:1 alpha:1]];
+    [imageGIF addTarget:self action:@selector(imageGIF) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:imageGIF];
     
     [self aotulayoutMasonry];
 }
@@ -201,6 +211,12 @@
 - (void)jumpToGCD {
     GCDViewController *GCDView = [[GCDViewController alloc] init];
     [self.navigationController pushViewController:GCDView animated:YES];
+}
+
+// image - GIF
+- (void)imageGIF {
+    ImageGIFController *imageGIF = [[ImageGIFController alloc] init];
+    [self.navigationController pushViewController:imageGIF animated:YES];
 }
 
 //aotulayout-Masonry
