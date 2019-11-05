@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240F9B3C236AD51800FFF67B /* ImageGIFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F9B3B236AD51800FFF67B /* ImageGIFController.m */; };
+		241133A6226EFE9700CB559D /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 241133A4226EFE9600CB559D /* gif1.gif */; };
+		241133A7226EFE9700CB559D /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 241133A5226EFE9700CB559D /* gif2.gif */; };
 		8308B2801F24B6F20050E829 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308B27F1F24B6F20050E829 /* TableView.m */; };
 		8341B5411EC41AC700AAAD63 /* ControlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341B5401EC41AC700AAAD63 /* ControlTest.m */; };
 		8347AC2D1F025F6E006A7A56 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8347AC2C1F025F6E006A7A56 /* GCDViewController.m */; };
@@ -52,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240F9B3A236AD51800FFF67B /* ImageGIFController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageGIFController.h; sourceTree = "<group>"; };
+		240F9B3B236AD51800FFF67B /* ImageGIFController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageGIFController.m; sourceTree = "<group>"; };
+		241133A4226EFE9600CB559D /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif1.gif; sourceTree = "<group>"; };
+		241133A5226EFE9700CB559D /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif2.gif; sourceTree = "<group>"; };
 		3C8D5808DAC8AC077686E8C0 /* Pods-playtext.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playtext.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playtext/Pods-playtext.debug.xcconfig"; sourceTree = "<group>"; };
 		6959F9D7335F3C9485EC6D86 /* libPods-playtext.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-playtext.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8308B27E1F24B6F20050E829 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
@@ -177,6 +184,8 @@
 				8341B5401EC41AC700AAAD63 /* ControlTest.m */,
 				8347AC2B1F025F6E006A7A56 /* GCDViewController.h */,
 				8347AC2C1F025F6E006A7A56 /* GCDViewController.m */,
+				240F9B3A236AD51800FFF67B /* ImageGIFController.h */,
+				240F9B3B236AD51800FFF67B /* ImageGIFController.m */,
 				83DBAD321F161CE000C48184 /* FMDBTest.h */,
 				83DBAD331F161CE000C48184 /* FMDBTest.m */,
 				8353254B1F18FC2400E28CF5 /* OnlyObject.h */,
@@ -186,6 +195,8 @@
 				83E285F91ED1D9CF00829CA8 /* BackController.m */,
 				83D9A91A1F41C90B008017E2 /* touxiang@2x.png */,
 				83D9A91B1F41C90B008017E2 /* touxiang@3x.png */,
+				241133A4226EFE9600CB559D /* gif1.gif */,
+				241133A5226EFE9700CB559D /* gif2.gif */,
 				8376DD8A1E8E4567005148E0 /* Main.storyboard */,
 				8376DD8D1E8E4567005148E0 /* Assets.xcassets */,
 				8376DD8F1E8E4567005148E0 /* LaunchScreen.storyboard */,
@@ -354,6 +365,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -375,9 +387,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8376DD911E8E4567005148E0 /* LaunchScreen.storyboard in Resources */,
+				241133A6226EFE9700CB559D /* gif1.gif in Resources */,
 				8376DD8E1E8E4567005148E0 /* Assets.xcassets in Resources */,
 				8376DD8C1E8E4567005148E0 /* Main.storyboard in Resources */,
 				83D9A91C1F41C90B008017E2 /* touxiang@2x.png in Resources */,
+				241133A7226EFE9700CB559D /* gif2.gif in Resources */,
 				83D9A91D1F41C90B008017E2 /* touxiang@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +456,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-playtext/Pods-playtext-frameworks.sh",
-				"${PODS_ROOT}/HyphenateLite/iOS_Pods_IMSDK_V3.5.3/HyphenateLite.framework",
+				"${PODS_ROOT}/HyphenateLite/iOS_Pods_IMSDK_V3.5.4/HyphenateLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -472,6 +486,7 @@
 				8350935C1ED80B4700F2AADC /* FirstView.m in Sources */,
 				83916EBC1F2B3C4D00030720 /* ApplyButton.m in Sources */,
 				8347AC2D1F025F6E006A7A56 /* GCDViewController.m in Sources */,
+				240F9B3C236AD51800FFF67B /* ImageGIFController.m in Sources */,
 				83E7C0601EEC1E2000172674 /* CollectionViewCell.m in Sources */,
 				8376DD831E8E4566005148E0 /* main.m in Sources */,
 				8341B5411EC41AC700AAAD63 /* ControlTest.m in Sources */,

@@ -31,24 +31,24 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"-----");
     __weak ViewController *weakSelf = self;
-    
+
     NSArray *arr1 = [[NSArray alloc] initWithObjects:@"IMG_1",@"IMG_2",@"IMG_3", nil];
     NSMutableArray *mutableArr = [[NSMutableArray alloc] initWithArray:arr1];
-    
+
     self.scroll = [[ScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, viewHeightFrame(700))];
     [self.scroll setImageViewAry:mutableArr];
     [self.view addSubview:self.scroll];
-    
+
     [self.scroll tapScroll:^{
         [weakSelf tapScroll];
     }];
-    
+
     self.applyView = [[ApplyView alloc] initWithFrame:CGRectMake(0, viewHeightFrame(700), SCREEN_WIDTH, SCREEN_HEIGHT - viewHeightFrame(700))];
     self.applyView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     [self.applyView setViewController:self];
     [self.view addSubview:self.applyView];
     [self.applyView.loadButton addTarget:self action:@selector(jumpView) forControlEvents:UIControlEventTouchUpInside];
-    
+
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToPackUpkeyboard:)];
     [self.view addGestureRecognizer:self.tapGesture];
 }
@@ -102,6 +102,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
